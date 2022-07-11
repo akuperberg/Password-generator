@@ -24,14 +24,9 @@ export class AppComponent {
     this.includeSymbols = !this.includeSymbols;
   }
 
-  onChangeLength(value: string) {
-    const parsedValue = parseInt(value);
-
-    if(!isNaN(parsedValue)) {
-      this.length = parsedValue;
-    } else {
-      this.length= 0;
-    }
+  onChangeLength(event:any) {
+    console.log(event.value)
+    this.length = event.value;
   }
 
   onButtonClick() {
